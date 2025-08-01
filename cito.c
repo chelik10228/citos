@@ -5,6 +5,7 @@
 
 main() {
 	char buf[128];
+	chdir("vdisk/");
 	fputs("\033[H\033[2J", stdout);
 	puts("[1 sec] Loading CitOS...");
 	sleep(1);
@@ -20,7 +21,10 @@ main() {
 			puts("3. cifetch - information of the system");
 			puts("4. echo - output text");
 			puts("5. inc - increment the 0 number");
-			puts("6. exit - exit from os");	
+			puts("6. ls - list files and folders");
+			puts("7. cat - read file");
+			puts("8. citoplayer - music player for citos");
+			puts("9. exit - exit from os");	
 		}
 		else if (strncmp(buf, "puttest", 7) == 0) {
 			puts("This is a test of 'puts'.");
@@ -41,6 +45,25 @@ main() {
 		else if (strncmp(buf, "inc", 3) == 0) {
 			int x = 0;
 			printf("Increment: %d\n", ++x);
+		}
+		else if (strncmp(buf, "ls", 2) == 0) {
+			system("ls");
+		}
+		else if (strncmp(buf, "cat", 3) == 0) {
+			char filename[128];
+			FILE *file;
+			char ch;
+			fputs("Enter filename: ", stdout);
+			scanf("%s", filename);
+			file = fopen(filename, "r");
+			puts("File contents:");
+			while ((ch = fgetc(file)) != EOF) {
+				printf("%c", ch);
+			}
+			fclose(file);
+		}
+		else if (strncmp(buf, "citoplayer", 10) == 0) {
+			system("./citoplayer");
 		}
 		else {
 			puts("Bad command.");
