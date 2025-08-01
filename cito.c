@@ -6,7 +6,11 @@
 main() {
 	char buf[128];
 	fputs("\033[H\033[2J", stdout);
-	puts("Welcome to \033[32mCitoOS\033[0m");
+	puts("[1 sec] Loading CitOS...");
+	sleep(1);
+	puts("[1 sec] Loading commands...");
+	sleep(1);
+	puts("Welcome to \033[32mCitOS\033[0m");
 	while (1) {
 		fputs("> ", stdout);
 		fgets(buf, 128, stdin);
@@ -15,7 +19,8 @@ main() {
 			puts("2. puttest - test of 'puts'");
 			puts("3. cifetch - information of the system");
 			puts("4. echo - output text");
-			puts("5. exit - exit from os");	
+			puts("5. inc - increment the 0 number");
+			puts("6. exit - exit from os");	
 		}
 		else if (strncmp(buf, "puttest", 7) == 0) {
 			puts("This is a test of 'puts'.");
@@ -32,6 +37,10 @@ main() {
 		}
 		else if (strncmp(buf, "exit", 4) == 0) {
 			return 0;
+		}
+		else if (strncmp(buf, "inc", 3) == 0) {
+			int x = 0;
+			printf("Increment: %d\n", ++x);
 		}
 		else {
 			puts("Bad command.");
