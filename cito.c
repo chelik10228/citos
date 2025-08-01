@@ -32,7 +32,7 @@ main() {
 		else if (strncmp(buf, "cifetch", 7) == 0) {
 			puts("-----------        | OS Name: CitoOS");
 			puts("|         |        | OS Version: 1.0");
-			puts("|         |        | Language: C");
+			puts("|         |        | Language: C, Shell, Python");
 			puts("-----------        | Developer: Luxidev");
 			puts("                   | Release Date: 2025-08-01");
 		}
