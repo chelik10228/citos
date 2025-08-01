@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import pygame;
+import os;
 pygame.mixer.init();
 
 print("Welcome to CitoPlayer 1.0!");
@@ -30,6 +31,9 @@ while True:
         print("3. stop - stop the music");
         print("4. pause - pause the music");
         print("5. unpause - unpause the music");
-        print("6. exit - exit");
+        print("6. list - list of all musics");
+        print("7. exit - exit");
+    elif (com[0] == "list"):
+        os.system("ls music/");
     else:
         print("Bad command.");

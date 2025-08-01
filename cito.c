@@ -66,9 +66,6 @@ main() {
 		else if (strncmp(buf, "citoplayer", 10) == 0) {
 			system("./citoplayer");
 		}
-		else if (strncmp(buf, "music-list", 10) == 0) {
-			system("ls music/");
-		}
 		else {
 			puts("Bad command.");
 		}
