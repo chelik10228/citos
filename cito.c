@@ -24,8 +24,7 @@ main() {
 			puts("6. ls - list files and folders");
 			puts("7. cat - read file");
 			puts("8. citoplayer - music player for citos");
-			puts("9. music-list - showing all commands");
-			puts("10. exit - exit from os");	
+			puts("9. exit - exit from os");	
 		}
 		else if (strncmp(buf, "puttest", 7) == 0) {
 			puts("This is a test of 'puts'.");
