@@ -1,0 +1,26 @@
+#!/usr/bin/python3
+file = input("Enter filename: ");
+quest = input("This is a new file? (y/n): ");
+print("r - read");
+print("w - write");
+print("o - over write");
+print("q - quit");
+if quest == "y":
+    f = open(file, "w");
+    f;
+elif quest == "n":
+    None;
+while True:
+    com = input("> ");
+    if com == "r":
+        f = open(file, "r");
+        print(f.read());
+    elif com == "w":
+        f = open(file, "a");
+        string = input("Enter string: ");
+        f.write(string);
+    elif com == "o":
+        f = open(file, "w");
+        f;
+    elif com == "q":
+        exit();
