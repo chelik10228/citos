@@ -1,3 +1,3 @@
 #!/bin/sh
-printf "\033[32mbuilding\033[0m os\n"
+printf "\033[32mcompiling\033[0m os\n"
 gcc cito.c -o cito --std=c89
