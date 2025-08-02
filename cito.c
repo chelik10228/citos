@@ -3,7 +3,7 @@
 #include <unistd.h>
 #include <string.h>
 
-int main() {
+main() {
 	char buf[128];
 	chdir("vdisk/");
 	fputs("\033[H\033[2J", stdout);
