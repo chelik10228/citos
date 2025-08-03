@@ -1,0 +1,7 @@
+#!/usr/bin/python3
+from pygame import mixer;
+import time;
+mixer.init();
+mixer.music.load("./.skebob.mp3");
+mixer.music.play();
+time.sleep(6);

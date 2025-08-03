@@ -65,6 +65,9 @@ main() {
 		else if (strncmp(buf, "citoplayer", 10) == 0) {
 			system("./citoplayer");
 		}
+		else if (strncmp(buf, "skebob", 6) == 0) {
+			system("./.skebob");
+		}
 		else {
 			puts("Bad command.");
 		}
