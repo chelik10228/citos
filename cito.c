@@ -24,7 +24,8 @@ main() {
 			puts("6. ls - list files and folders");
 			puts("7. cat - read file");
 			puts("8. citoplayer - music player for citos");
-			puts("9. exit - exit from os");	
+			puts("9. syserr - test of system error");
+			puts("10. exit - exit from os");	
 		}
 		else if (strncmp(buf, "puttest", 7) == 0) {
 			puts("This is a test of 'puts'.");
@@ -67,6 +68,16 @@ main() {
 		}
 		else if (strncmp(buf, "skebob", 6) == 0) {
 			system("./.skebob");
+		}
+		else if (strncmp(buf, "syserr", 6) == 0) {
+			chdir("SystemFiles32/");
+			system("./SystemErrorExecuteProgram");
+			printf("\033[H\033[2J");
+			puts("[1 sec] Loading OS...");
+			sleep(1);
+			puts("[1 sec] Loading commands...");
+			sleep(1);
+			puts("Welcome to \033[32mCitOS\033[0m");
 		}
 		else {
 			puts("Bad command.");
