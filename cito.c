@@ -78,7 +78,7 @@ main() {
 			puts("[1 sec] Loading commands...");
 			sleep(1);
 			puts("Welcome to \033[32mCitOS\033[0m");
-			chdir("vdisk/");
+			chdir("..");
 		}
 		else {
 			puts("Bad command.");
