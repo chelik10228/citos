@@ -23,9 +23,8 @@ main() {
 			puts("5. inc - increment the 0 number");
 			puts("6. ls - list files and folders");
 			puts("7. cat - read file");
-			puts("8. citoplayer - music player for citos");
-			puts("9. syserr - test of system error");
-			puts("10. exit - exit from os");	
+			puts("8. syserr - test of system error");
+			puts("9. exit - exit from os");	
 		}
 		else if (strncmp(buf, "puttest", 7) == 0) {
 			puts("This is a test of 'puts'.");
@@ -62,9 +61,6 @@ main() {
 				printf("%c", ch);
 			}
 			fclose(file);
-		}
-		else if (strncmp(buf, "citoplayer", 10) == 0) {
-			system("./citoplayer");
 		}
 		else if (strncmp(buf, "skebob", 6) == 0) {
 			system("./.skebob");
