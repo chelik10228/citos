@@ -1,0 +1,35 @@
+#!/usr/bin/python3
+import pygame;
+
+screen = pygame.display.set_mode([340,200]);
+screen.fill((0,0,0));
+pygame.display.flip();
+while True:
+    print("1 - Black");
+    print("2 - Red");
+    print("3 - Green");
+    print("4 - Yellow");
+    print("5 - Blue");
+    print("6 - Purple");
+    print("7 - Brown");
+    print("8 - White");
+    print("9 - Exit");
+    if num == "1":
+        screen.fill((0,0,0));
+    elif num == "2":
+        screen.fill((255,0,0));
+    elif num == "3":
+        screen.fill((0,255,0));
+    elif num == "4":
+        screen.fill((255,255,0));
+    elif num == "5":
+        screen.fill((0,0,255));
+    elif num == "6":
+        screen.fill((120,0,255));
+    elif num == "7":
+        screen.fill((150,75,0));
+    elif num == "8":
+        screen.fill((255,255,255));
+    elif num == "9":
+        exit();
+    pygame.display.update();

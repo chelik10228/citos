@@ -23,7 +23,7 @@ main() {
 			puts("5. inc - increment the 0 number");
 			puts("6. ls - list files and folders");
 			puts("7. cat - read file");
-			puts("8. syserr - test of system error");
+			puts("8. display - the display with color change");
 			puts("9. exit - exit from os");	
 		}
 		else if (strncmp(buf, "puttest", 7) == 0) {
@@ -65,16 +65,8 @@ main() {
 		else if (strncmp(buf, "skebob", 6) == 0) {
 			system("./.skebob");
 		}
-		else if (strncmp(buf, "syserr", 6) == 0) {
-			chdir("SystemFiles32/");
-			system("./SystemErrorExecuteProgram");
-			printf("\033[H\033[2J");
-			puts("[1 sec] Loading OS...");
-			sleep(1);
-			puts("[1 sec] Loading commands...");
-			sleep(1);
-			puts("Welcome to \033[32mCitOS\033[0m");
-			chdir("..");
+		else if (strncmp(buf, "display", 6) == 0) {
+		  system("./display");
 		}
 		else {
 			puts("Bad command.");
